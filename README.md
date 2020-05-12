@@ -54,6 +54,14 @@ To install WebODM manually, these steps should get you up and running:
 * From the Docker Quickstart Terminal or Git Bash (Windows), or from the command line (Mac / Linux), type:
 ```bash
 git clone https://github.com/OpenDroneMap/WebODM --config core.autocrlf=input --depth 1
+```
+* Then add the user to the docker group:
+
+```
+sudo usermod -aG docker ${USER}
+```
+and then run:
+```
 cd WebODM
 ./webodm.sh start
 ```
